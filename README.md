@@ -1,4 +1,5 @@
 # Restaurant Searcher
+A .Net 6 console app that shows restaurants open now in a given area.
 
 # :woman_technologist: Tools and Technologies Used
 - C#
