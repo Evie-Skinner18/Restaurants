@@ -11,4 +11,12 @@ List<Restaurant> localRestaurantsOpenNow = await restaurantService.GetLocalResta
 Console.WriteLine("Local restaurants open now:");
 
 foreach(var restaurant in localRestaurantsOpenNow)
-    Console.WriteLine($"{restaurant.Name}");
+{
+    string cuisineTypesMessage = "";
+
+    List<string> cuisineTypeNames = restaurant.CuisineTypes.Select(t => t.Name).ToList();
+    cuisineTypesMessage = string.Join(", ", cuisineTypeNames);
+
+    Console.WriteLine($"{restaurant.Name} make delicious foods of the following types: {cuisineTypesMessage}. They have a rating of {restaurant.Rating.StarRating} stars.");
+
+}

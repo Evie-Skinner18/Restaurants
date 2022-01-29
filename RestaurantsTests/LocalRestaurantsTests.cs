@@ -9,7 +9,7 @@ public class LocalRestaurantsTests
 {
 
     [Test]
-    public void CreateRequestUri_WhenTheGivenPostcodeIsEC4M_ShouldCreateAStringSoecifyingEC4MAsThePostcodeParameter()
+    public void CreateRequestUri_WhenTheGivenPostcodeIsgl102na_ShouldCreateAStringSoecifyinggl102naAsThePostcodeParameter()
     {
         HttpClient apiClient = new();
         string baseUri = @"https://uk.api.just-eat.io";
