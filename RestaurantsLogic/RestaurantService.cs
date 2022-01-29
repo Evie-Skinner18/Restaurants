@@ -15,6 +15,8 @@ public class RestaurantService
 
     public async Task<List<Restaurant>> GetLocalRestaurants(string postcode)
     {
+        postcode = postcode.Trim();
+        
         string requestUri = CreateRequestUri(postcode);
         HttpResponseMessage apiResponse = await CallApi(requestUri);
 

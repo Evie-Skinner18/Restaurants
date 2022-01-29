@@ -1,22 +1,36 @@
 ﻿using RestaurantsLogic;
 
-Console.WriteLine($"Hello and welcome to the restaurant searcher");
+Console.WriteLine("Hello and welcome to the restaurant searcher");
 
-HttpClient apiClient = new();
-string baseUri = @"https://uk.api.just-eat.io";
-RestaurantService restaurantService = new(apiClient, baseUri);
+Console.WriteLine("Please enter a UK postcode to see all restaurants currently open in that area!");
 
-List<Restaurant> localRestaurantsOpenNow = await restaurantService.GetLocalRestaurants("gl55bp");
+string postcode = Console.ReadLine();
 
-Console.WriteLine("Local restaurants open now:");
+bool isValid = UserInputValidator.ValidateUkPostcode(postcode);
 
-foreach(var restaurant in localRestaurantsOpenNow)
+if (!isValid)
 {
-    string cuisineTypesMessage = "";
+    Console.WriteLine("Please enter a valid UK postcode");
+}
 
-    List<string> cuisineTypeNames = restaurant.CuisineTypes.Select(t => t.Name).ToList();
-    cuisineTypesMessage = string.Join(", ", cuisineTypeNames);
+else
+{
+    HttpClient apiClient = new();
+    string baseUri = @"https://uk.api.just-eat.io";
+    RestaurantService restaurantService = new(apiClient, baseUri);
 
-    Console.WriteLine($"{restaurant.Name} make delicious foods of the following types: {cuisineTypesMessage}. They have a rating of {restaurant.Rating.StarRating} stars.");
+    List<Restaurant> localRestaurantsOpenNow = await restaurantService.GetLocalRestaurants(postcode);
 
+    Console.WriteLine("Local restaurants open now:");
+
+    foreach(var restaurant in localRestaurantsOpenNow)
+    {
+        string cuisineTypesMessage = "";
+
+        List<string> cuisineTypeNames = restaurant.CuisineTypes.Select(t => t.Name).ToList();
+        cuisineTypesMessage = string.Join(", ", cuisineTypeNames);
+
+        Console.WriteLine($"{restaurant.Name} make delicious foods of the following types: {cuisineTypesMessage}. They have a rating of {restaurant.Rating.StarRating} stars.");
+
+    }
 }
