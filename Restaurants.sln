@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantsUI", "RestaurantsUI\RestaurantsUI.csproj", "{A9503F44-2529-4C77-8B24-AA9C9C57A5BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantsLogic", "RestaurantsLogic\RestaurantsLogic.csproj", "{5F182BCB-2E5C-4C25-AA66-F3CE857D0E57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantsTests", "RestaurantsTests\RestaurantsTests.csproj", "{F25CBB5B-211F-4C3B-9915-55294500391D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9503F44-2529-4C77-8B24-AA9C9C57A5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9503F44-2529-4C77-8B24-AA9C9C57A5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9503F44-2529-4C77-8B24-AA9C9C57A5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9503F44-2529-4C77-8B24-AA9C9C57A5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F182BCB-2E5C-4C25-AA66-F3CE857D0E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F182BCB-2E5C-4C25-AA66-F3CE857D0E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F182BCB-2E5C-4C25-AA66-F3CE857D0E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F182BCB-2E5C-4C25-AA66-F3CE857D0E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25CBB5B-211F-4C3B-9915-55294500391D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25CBB5B-211F-4C3B-9915-55294500391D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25CBB5B-211F-4C3B-9915-55294500391D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25CBB5B-211F-4C3B-9915-55294500391D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
