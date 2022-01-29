@@ -1,10 +1,5 @@
 ﻿namespace RestaurantsLogic;
 
-
-
-// RestaurantSearchResponse - serialisejson
-// IsOpenNow bool
-
     public class RestaurantSearchResponse
     {
         public string? Area { get; set; }
