@@ -1,5 +1,14 @@
 ﻿using RestaurantsLogic;
 
-Restaurant jimmys = new("Jimmy's");
+Console.WriteLine($"Hello and welcome to the restaurant searcher");
 
-Console.WriteLine($"Hello and welcome to {jimmys.Name}!");
+HttpClient apiClient = new();
+string baseUri = @"https://uk.api.just-eat.io";
+RestaurantService restaurantService = new(apiClient, baseUri);
+
+List<Restaurant> localRestaurantsOpenNow = await restaurantService.GetLocalRestaurants("gl55bp");
+
+Console.WriteLine("Local restaurants open now:");
+
+foreach(var restaurant in localRestaurantsOpenNow)
+    Console.WriteLine($"{restaurant.Name}");
